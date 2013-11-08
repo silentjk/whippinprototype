@@ -1,0 +1,22 @@
+.priceadd {
+	font-size: 20px !important;
+}
+.destitle {
+	font-weight: bold;
+}
+.smaller {
+	font-size: 12px;
+	font-weight: normal;
+}
+
+.searchbox {
+	padding-top: 20px;
+}
+
+.product-related {
+	background-color: #fff;
+}
+
+.nomargin {
+	margin-left: 0px !important;
+}
