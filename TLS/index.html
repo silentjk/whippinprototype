@@ -1,0 +1,43 @@
+<html>
+<head>
+<title>Earthquake Fault</title>
+<link rel="stylesheet" href="style.css">
+<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+<script src="http://code.jquery.com/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+</head>
+<body>
+<script type= "text/javascript">
+	function bldgbtn() {
+		document.getElementById('buildingdamage').style.display = "block";
+		document.getElementById('fire').style.display = "none";
+		document.getElementById('liquefact').style.display = "none";
+	}
+	function lqfbtn() {
+		document.getElementById('buildingdamage').style.display = "none";
+		document.getElementById('fire').style.display = "none";
+		document.getElementById('liquefact').style.display = "block";
+	}
+	function firebtn() {
+		document.getElementById('buildingdamage').style.display = "none";
+		document.getElementById('fire').style.display = "block";
+		document.getElementById('liquefact').style.display = "none";
+	}
+</script>
+<div class="row">
+<div class="span7">
+<div class="imageWrapper">
+  <img class="overlayImage" src="default.png">
+  <img class="overlayImage" id="fire" src="fire.png" style="display:none">
+  <img class="overlayImage" id="liquefact" src="liquefaction.png" style="display:none">
+  <img class="overlayImage" id="buildingdamage" src="buildingdamage.png" style="display:none">
+</div>
+</div>
+<div class="span5">
+	<button id="buildingbutton" onclick="bldgbtn()" class="btn btn-inverse">Building Damage</button><br />
+	<button id="lqfbutton" onclick="lqfbtn()" class="btn btn-info">Liquefaction Risk</button><br />
+	<button id="firebutton" onclick="firebtn()" class="btn btn-danger">Fire Spread</button><br />
+</div>
+</div>
+</body>
+</html>
