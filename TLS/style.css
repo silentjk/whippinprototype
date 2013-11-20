@@ -12,3 +12,8 @@
      -moz-border-radius: 0 !important;
           border-radius: 0 !important;
 }
+.shadowm {
+-webkit-box-shadow: 6px 4px 15px rgba(50, 50, 50, 0.36);
+-moz-box-shadow:    6px 4px 15px rgba(50, 50, 50, 0.36);
+box-shadow:         6px 4px 15px rgba(50, 50, 50, 0.36);
+}

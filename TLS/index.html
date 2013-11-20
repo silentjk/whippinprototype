@@ -3,7 +3,7 @@
 <title>Earthquake Fault</title>
 <link rel="stylesheet" href="style.css">
 <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
-<script src="http://code.jquery.com/jquery.js"></script>
+<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 </head>
 <body>
@@ -23,20 +23,41 @@
 		document.getElementById('fire').style.display = "block";
 		document.getElementById('liquefact').style.display = "none";
 	}
+	$(document).ready(function(){
+		$('#buildingbutton').click(function(){
+			$('#buildingdamage').fadeIn();
+			$('#liquefact').fadeOut();
+			$('#fire').fadeOut();
+		});
+		$('#lqfbutton').click(function(){
+			$('#buildingdamage').fadeOut();
+			$('#liquefact').fadeIn();
+			$('#fire').fadeOut();
+		});
+		$('#firebutton').click(function(){
+			$('#buildingdamage').fadeOut();
+			$('#liquefact').fadeOut();
+			$('#fire').fadeIn();
+		});
+	});
 </script>
+<div class="container">
 <div class="row">
 <div class="span7">
 <div class="imageWrapper">
-  <img class="overlayImage" src="default.png">
+  <img class="overlayImage" src="default.jpg">
   <img class="overlayImage" id="fire" src="fire.png" style="display:none">
   <img class="overlayImage" id="liquefact" src="liquefaction.png" style="display:none">
   <img class="overlayImage" id="buildingdamage" src="buildingdamage.png" style="display:none">
 </div>
 </div>
-<div class="span5">
-	<button id="buildingbutton" onclick="bldgbtn()" class="btn btn-inverse">Building Damage</button><br />
-	<button id="lqfbutton" onclick="lqfbtn()" class="btn btn-info">Liquefaction Risk</button><br />
-	<button id="firebutton" onclick="firebtn()" class="btn btn-danger">Fire Spread</button><br />
+<div class="span5" style="padding-top:100px">
+	<img class="shadowm" id="buildingbutton" src="building.jpg"/><br /><br />
+	<img class="shadowm" id="lqfbutton" src="liquefaction.jpg" /><br />
+	<br />
+	<img class="shadowm" id="firebutton" src="fire.jpg" /><br />
+	<br />
+</div>
 </div>
 </div>
 </body>
